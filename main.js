@@ -9,11 +9,15 @@ if ('scrollRestoration' in history) {
 }
 window.scrollTo(0, 0);
 
-// Fade-stack word cycle
+// Fade-stack word cycle - optimized to prevent scroll lag
 const words = Array.from(document.querySelectorAll(".fade-stack b"));
 let idx = 0;
 function cycleWords() {
-  words.forEach((w, i) => w.style.opacity = i === idx ? 1 : 0);
+  requestAnimationFrame(() => {
+    words.forEach((w, i) => {
+      w.style.opacity = i === idx ? '1' : '0';
+    });
+  });
   idx = (idx + 1) % words.length;
 }
 cycleWords();
