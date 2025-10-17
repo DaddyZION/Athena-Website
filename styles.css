@@ -356,37 +356,23 @@ cite { display: block; margin-top: 12px; color: var(--primary-blue); font-style:
   transition: all 0.3s ease;
 }
 
-.dropdown-icon {
-  transition: transform 0.3s ease;
+/* Detailed Information Section */
+.detailed-info-section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #f8fcff 0%, #ffffff 100%);
 }
 
-.button.large.active .dropdown-icon {
-  transform: rotate(180deg);
-}
-
-/* Dropdown Styles */
-.info-dropdown {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
-  margin-top: 0;
-}
-
-.info-dropdown.active {
-  max-height: 10000px;
-  transition: max-height 1s ease-in;
-}
-
-.dropdown-content {
+.info-content {
   background: linear-gradient(135deg, #ffffff 0%, #f8fcff 100%);
   border: 2px solid var(--line);
   border-radius: 20px;
   padding: 40px;
-  margin-top: 30px;
   box-shadow: 0 8px 32px rgba(44, 127, 230, 0.15);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.dropdown-content h2 {
+.info-content h2 {
   font-size: clamp(32px, 5vw, 48px);
   margin: 0 0 32px;
   background: var(--gradient-primary);
@@ -461,7 +447,7 @@ cite { display: block; margin-top: 12px; color: var(--primary-blue); font-style:
   .users-grid { grid-template-columns: 1fr; }
   .competitors-grid { grid-template-columns: 1fr; }
   
-  .dropdown-content {
+  .info-content {
     padding: 24px;
   }
 }
@@ -470,7 +456,7 @@ cite { display: block; margin-top: 12px; color: var(--primary-blue); font-style:
   .data-categories { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr; }
   
-  .dropdown-content {
+  .info-content {
     padding: 16px;
   }
   
