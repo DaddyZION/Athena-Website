@@ -23,24 +23,14 @@ body {
 
 /* Logo Intro Screen */
 .logo-intro {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
-  transition: opacity 0.6s ease;
-  will-change: opacity;
-}
-
-.logo-intro.hidden {
-  opacity: 0;
-  pointer-events: none;
+  position: relative;
 }
 
 .logo-intro-content {
@@ -53,7 +43,6 @@ body {
   height: 200px;
   margin-bottom: 32px;
   animation: softPulse 3s ease-in-out infinite;
-  will-change: transform;
 }
 
 .intro-brand {
@@ -74,26 +63,6 @@ body {
   animation: fadeInUp 1s ease-out 0.4s both;
 }
 
-.scroll-indicator {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: var(--primary-blue);
-  font-size: 14px;
-  animation: fadeInUp 1s ease-out 0.6s both, bounce 2s ease-in-out 1.5s infinite;
-  cursor: pointer;
-  will-change: transform;
-}
-
-.scroll-indicator svg {
-  color: var(--primary-cyan);
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -111,15 +80,6 @@ body {
   }
   50% {
     transform: scale(1.03);
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(8px);
   }
 }
 

@@ -1,6 +1,5 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Lenis from "lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,49 +8,6 @@ if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 window.scrollTo(0, 0);
-
-// Logo Intro Screen Handler
-const logoIntro = document.getElementById('logoIntro');
-const scrollIndicator = document.querySelector('.scroll-indicator');
-let hasScrolled = false;
-
-// Hide intro on scroll or click
-function hideIntro() {
-  if (!hasScrolled) {
-    hasScrolled = true;
-    logoIntro.classList.add('hidden');
-    document.body.style.overflow = 'auto';
-  }
-}
-
-// Prevent scrolling initially
-document.body.style.overflow = 'hidden';
-
-// Listen for wheel event (before scroll happens)
-window.addEventListener('wheel', (e) => {
-  if (!hasScrolled) {
-    e.preventDefault();
-    hideIntro();
-  }
-}, { passive: false });
-
-// Listen for touch scroll on mobile
-window.addEventListener('touchmove', hideIntro, { once: true, passive: true });
-
-// Click on scroll indicator
-if (scrollIndicator) {
-  scrollIndicator.addEventListener('click', () => {
-    hideIntro();
-    setTimeout(() => {
-      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
-    }, 100);
-  });
-}
-
-// Smooth scroll (initialize after potential intro)
-const lenis = new Lenis({ lerp: 0.12, smoothWheel: true, smoothTouch: false });
-function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-requestAnimationFrame(raf);
 
 // Fade-stack word cycle
 const words = Array.from(document.querySelectorAll(".fade-stack b"));
