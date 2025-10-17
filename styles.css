@@ -335,7 +335,218 @@ cite { display: block; margin-top: 12px; color: var(--primary-blue); font-style:
   font-weight: 500;
 }
 
-/* New section styles */
+/* More Info Section */
+.more-info-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.button.large {
+  padding: 16px 32px;
+  font-size: 18px;
+  border-radius: 16px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  overflow: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal-content {
+  background: #ffffff;
+  margin: 2% auto;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 20px;
+  box-shadow: 0 20px 80px rgba(44, 127, 230, 0.3);
+  position: relative;
+  animation: slideIn 0.4s ease;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close {
+  position: sticky;
+  top: 0;
+  right: 0;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 10;
+  margin: 20px 20px 0 auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  box-shadow: 0 4px 12px rgba(44, 127, 230, 0.4);
+}
+
+.modal-close:hover {
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 6px 20px rgba(44, 127, 230, 0.6);
+}
+
+.modal-body {
+  padding: 0 40px 40px 40px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.modal-body h2 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 0 0 32px;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+}
+
+.modal-section {
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 2px solid var(--line);
+}
+
+.modal-section:last-child {
+  border-bottom: none;
+}
+
+.modal-section h3 {
+  color: var(--primary-blue);
+  font-size: clamp(24px, 3vw, 32px);
+  margin: 0 0 16px;
+}
+
+.modal-section h4 {
+  color: var(--primary-blue);
+  font-size: clamp(18px, 2.5vw, 24px);
+  margin: 24px 0 12px;
+}
+
+.modal-section h5 {
+  color: var(--primary-cyan);
+  font-size: clamp(16px, 2vw, 20px);
+  margin: 20px 0 10px;
+}
+
+.modal-section p {
+  line-height: 1.8;
+  color: var(--text);
+  margin: 12px 0;
+}
+
+.modal-section ul {
+  margin: 12px 0;
+  padding-left: 28px;
+  line-height: 1.8;
+}
+
+.modal-section li {
+  margin: 8px 0;
+  color: var(--text);
+}
+
+.modal-section a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.2s ease;
+}
+
+.modal-section a:hover {
+  color: var(--primary-cyan);
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar for modal */
+.modal-body::-webkit-scrollbar {
+  width: 12px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: var(--line);
+  border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-blue);
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .hero { grid-template-columns: 1fr; }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .advantages-grid { grid-template-columns: 1fr; }
+  .users-grid { grid-template-columns: 1fr; }
+  .competitors-grid { grid-template-columns: 1fr; }
+  
+  .modal-content {
+    width: 95%;
+    margin: 1% auto;
+  }
+  
+  .modal-body {
+    padding: 0 24px 24px 24px;
+  }
+}
+@media (max-width: 560px) {
+  .feature-grid { grid-template-columns: 1fr; }
+  .data-categories { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; }
+  
+  .modal-body {
+    padding: 0 16px 16px 16px;
+  }
+}/* New section styles */
 .section-title {
   text-align: center;
   font-size: clamp(28px, 5vw, 42px);

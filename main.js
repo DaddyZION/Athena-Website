@@ -74,3 +74,35 @@ gsap.to(".hero-visual .rings span:nth-child(3)", {
   rotate: 180, scale: 1.1
 });
 
+// Modal functionality
+const modal = document.getElementById('infoModal');
+const showMoreBtn = document.getElementById('showMoreBtn');
+const closeModal = document.getElementById('closeModal');
+
+// Open modal
+showMoreBtn.addEventListener('click', () => {
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Prevent background scrolling
+});
+
+// Close modal
+closeModal.addEventListener('click', () => {
+  modal.classList.remove('active');
+  document.body.style.overflow = 'auto';
+});
+
+// Close modal when clicking outside
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal.classList.contains('active')) {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+});
