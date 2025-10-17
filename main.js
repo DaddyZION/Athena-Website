@@ -4,6 +4,12 @@ import Lenis from "lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Force scroll to top on page load/refresh
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 // Logo Intro Screen Handler
 const logoIntro = document.getElementById('logoIntro');
 const scrollIndicator = document.querySelector('.scroll-indicator');
@@ -21,26 +27,26 @@ function hideIntro() {
 // Prevent scrolling initially
 document.body.style.overflow = 'hidden';
 
-// Listen for scroll
-window.addEventListener('scroll', hideIntro, { once: true });
-
 // Listen for wheel event (before scroll happens)
-window.addEventListener('wheel', hideIntro, { once: true });
+window.addEventListener('wheel', (e) => {
+  if (!hasScrolled) {
+    e.preventDefault();
+    hideIntro();
+  }
+}, { passive: false });
+
+// Listen for touch scroll on mobile
+window.addEventListener('touchmove', hideIntro, { once: true, passive: true });
 
 // Click on scroll indicator
 if (scrollIndicator) {
   scrollIndicator.addEventListener('click', () => {
     hideIntro();
-    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+    setTimeout(() => {
+      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+    }, 100);
   });
 }
-
-// Auto-hide after 3 seconds if no interaction
-setTimeout(() => {
-  if (!hasScrolled) {
-    hideIntro();
-  }
-}, 3000);
 
 // Smooth scroll (initialize after potential intro)
 const lenis = new Lenis({ lerp: 0.12, smoothWheel: true, smoothTouch: false });
