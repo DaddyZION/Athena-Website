@@ -78,24 +78,36 @@ gsap.to(".hero-visual .rings span:nth-child(3)", {
 const dropdown = document.getElementById('infoDropdown');
 const showMoreBtn = document.getElementById('showMoreBtn');
 
-// Toggle dropdown
-showMoreBtn.addEventListener('click', () => {
-  const isActive = dropdown.classList.contains('active');
+if (!dropdown || !showMoreBtn) {
+  console.error('Dropdown elements not found:', { dropdown, showMoreBtn });
+} else {
+  console.log('Dropdown elements found successfully');
   
-  if (isActive) {
-    // Close dropdown
-    dropdown.classList.remove('active');
-    showMoreBtn.classList.remove('active');
-    showMoreBtn.querySelector('span').textContent = 'Show More Info';
-  } else {
-    // Open dropdown
-    dropdown.classList.add('active');
-    showMoreBtn.classList.add('active');
-    showMoreBtn.querySelector('span').textContent = 'Show Less Info';
+  // Toggle dropdown
+  showMoreBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('Button clicked');
     
-    // Smooth scroll to dropdown after a short delay
-    setTimeout(() => {
-      dropdown.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 300);
-  }
-});
+    const isActive = dropdown.classList.contains('active');
+    console.log('Current state:', isActive ? 'active' : 'inactive');
+    
+    if (isActive) {
+      // Close dropdown
+      dropdown.classList.remove('active');
+      showMoreBtn.classList.remove('active');
+      const spanElement = showMoreBtn.querySelector('span');
+      if (spanElement) spanElement.textContent = 'Show More Info';
+    } else {
+      // Open dropdown
+      dropdown.classList.add('active');
+      showMoreBtn.classList.add('active');
+      const spanElement = showMoreBtn.querySelector('span');
+      if (spanElement) spanElement.textContent = 'Show Less Info';
+      
+      // Smooth scroll to dropdown after a short delay
+      setTimeout(() => {
+        dropdown.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 300);
+    }
+  });
+}
