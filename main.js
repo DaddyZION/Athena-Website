@@ -4,8 +4,46 @@ import Lenis from "lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Smooth scroll
-const lenis = new Lenis({ lerp: 0.12, smoothWheel: true, smoothTouch: true });
+// Logo Intro Screen Handler
+const logoIntro = document.getElementById('logoIntro');
+const scrollIndicator = document.querySelector('.scroll-indicator');
+let hasScrolled = false;
+
+// Hide intro on scroll or click
+function hideIntro() {
+  if (!hasScrolled) {
+    hasScrolled = true;
+    logoIntro.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// Prevent scrolling initially
+document.body.style.overflow = 'hidden';
+
+// Listen for scroll
+window.addEventListener('scroll', hideIntro, { once: true });
+
+// Listen for wheel event (before scroll happens)
+window.addEventListener('wheel', hideIntro, { once: true });
+
+// Click on scroll indicator
+if (scrollIndicator) {
+  scrollIndicator.addEventListener('click', () => {
+    hideIntro();
+    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+  });
+}
+
+// Auto-hide after 3 seconds if no interaction
+setTimeout(() => {
+  if (!hasScrolled) {
+    hideIntro();
+  }
+}, 3000);
+
+// Smooth scroll (initialize after potential intro)
+const lenis = new Lenis({ lerp: 0.12, smoothWheel: true, smoothTouch: false });
 function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
 requestAnimationFrame(raf);
 
