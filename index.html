@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Athena – AI-Powered Personalized Learning</title>
+  <meta name="description" content="Athena transforms education by combining AI-powered personalization with project-based learning to boost engagement, reduce teacher burnout, and prepare students for the future." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <script type="importmap">
+  {
+    "imports": {
+      "gsap": "https://esm.sh/gsap@3.12.2",
+      "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.2/ScrollTrigger",
+      "lenis": "https://esm.sh/@studio-freight/lenis@1.0.26"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" aria-label="Primary">
+    <div class="brand">
+      <img src="logo.png" alt="" aria-hidden="true" class="logo" />
+      <span class="brand-name">Athena</span>
+    </div>
+    <nav class="nav">
+      <a href="#problem">The Problem</a>
+      <a href="#solution">Our Solution</a>
+      <a href="#advantages">Advantages</a>
+      <a href="#users">Users</a>
+      <a href="#cta" class="cta-link">Learn More</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-label="Intro">
+      <div class="hero-content">
+        <h1>
+          Transforming education through
+          <span class="fade-stack">
+            <b aria-hidden="true">engagement.</b>
+            <b aria-hidden="true">personalization.</b>
+            <b aria-hidden="true">innovation.</b>
+            <span class="sr-only">engagement, personalization, innovation</span>
+          </span>
+        </h1>
+        <p class="sub">Athena combines AI-powered personalization with project-based learning to solve the tripartite crisis in modern education: student disengagement, educator burnout, and the relevance gap.</p>
+        <div class="actions">
+          <a href="#solution" class="button primary">Discover Athena</a>
+          <a href="#advantages" class="button ghost">See the benefits</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="device-frame">
+          <img src="screen1.png" alt="" class="device-screen" />
+          <div class="device-glow"></div>
+        </div>
+        <div class="rings">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="proposal" class="features" aria-label="The Education Crisis">
+      <ul class="feature-grid">
+        <li class="card" id="problem">
+          <h3>The Tripartite Crisis</h3>
+          <p><strong>Student Disengagement:</strong> One in four pupils in England disengage when moving to secondary school. <strong>Educator Burnout:</strong> Teachers are drowning in administrative tasks and marking. <strong>Relevance Gap:</strong> Students feel unprepared for their futures and the workforce demands.</p>
+        </li>
+        <li class="card" id="solution">
+          <h3>How Athena Solves This</h3>
+          <p>Athena allows teachers and students to curate personalized custom coursework, mock exams, and tutorials. Using natural language, teachers specify topics and requirements, and our AI creates engaging lessons tailored to each student's interests—freeing teachers to focus on mentoring.</p>
+        </li>
+        <li class="card" id="advantages">
+          <h3>Key Advantages</h3>
+          <p><strong>Centralized Data:</strong> All resources in one place. <strong>Enhanced Communication:</strong> Shared spaces for feedback and collaboration. <strong>Data-Driven Insights:</strong> Real-time monitoring of student performance for teachers, tutors, and parents.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="demo" class="demo" aria-label="User Categories">
+      <div class="demo-wrap">
+        <div class="device-stack">
+          <figure class="device">
+            <img src="screen1.png" alt="Teachers view - AI lesson generation" class="shot current" />
+            <img src="screen2.png" alt="Students view - personalized learning" class="shot" />
+            <img src="screen3.png" alt="Parents & Admin dashboard" class="shot" />
+            <figcaption class="caption">Explore user experiences</figcaption>
+          </figure>
+          <div class="controls" role="group" aria-label="Demo controls">
+            <button class="pill prev" aria-label="Previous screen">‹</button>
+            <button class="pill next" aria-label="Next screen">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote" aria-label="Impact Statement">
+      <blockquote>
+        "By grounding abstract concepts in student-chosen projects, Athena intrinsically links knowledge to tangible outcomes—boosting engagement while freeing educators to become high-impact mentors."
+        <cite>— Project Athena Team</cite>
+      </blockquote>
+    </section>
+
+    <section id="cta" class="cta">
+      <div class="cta-box">
+        <h2>Ready to transform your school?</h2>
+        <p>Join the educational revolution and discover how Athena can boost engagement, reduce teacher workload, and prepare students for the future.</p>
+        <form class="cta-form" aria-label="Email capture">
+          <label for="email" class="sr-only">Email</label>
+          <input id="email" name="email" type="email" placeholder="your.email@school.edu" required />
+          <button type="submit" class="button primary">Request Information</button>
+        </form>
+        <p class="legal">Join schools already transforming education with AI-powered personalized learning.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© 2025 Athena. Empowering education through AI-driven personalization.</small>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

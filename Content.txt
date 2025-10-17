@@ -1,0 +1,133 @@
+Advantages Of Athena (DRAFT)
+
+Advantages:
+Centralisation of data: Compiles all data into a single repository, allowing a comprehensive view of student resources, progress and administrative operations. This reduces redundancy in data through streamlined operations.
+Improves communication: This system promotes connectivity by creating a shared space where users are allowed to communicate through messages, comments, or by sharing feedback. Additionally, 
+Provides data-driven insights: The system allows users to manage their own learning plans, Consequently, the compilation of data on student activity provides real-time information to teachers, personal tutors and parents to monitor student performance. 
+
+Competitor Analysis DRAFT
+
+Competitor Analysis
+LessonUp
+This is a web application where you can find and teach interactive lessons covering each phase of a lesson. It follows the structure of producing an exercise to activate prior knowledge, is able to explore new ways to teach a topic and provides knowledge checks at the end to ensure students' needs are understood. Their main goal is to increase the interactivity within the classroom to encourage engagement with ease as it is built into the PowerPoints.
+Benefits:
+Adds interactivity to PowerPoints, including:
+Multiple choice
+Polls
+Fill in the blank
+Word clouds
+Spinners
+Lesson creator AI
+AI quizzes
+Summarise lessons
+This reduces teachers' workloads as less time will be spent prepping for the lesson so more time can be focused on critical tasks whilst also improving the quality of teaching. Students will be more engaged with lessons through the increased interaction throughout the slides which helps deepen their understanding. 
+Disadvantages: 
+Limited number of tools
+Teachers need to be able to familiarise themselves with the interface and those who have less digital literacy may struggle
+Requires students to have their own devices to access some tools which may disadvantage certain learner groups
+Issues with performance across devices will occur
+Students with screen readers will not be able to access the interactive features
+It may lead to an overreliance of screen time 
+ 
+TeachMateAI
+This AI assistant is able to create lesson plans and generate personalised reports on students. It is mainly targeted towards primary education helping with SPAG and Year 6 SATS practice. Teachers are able to streamline tasks with these tools reducing the administrator burden. As it is embedded with the specific curriculum, students are taught the exact information they are required to learn
+Benefits:
+Supports a range of curricula worldwide
+Has a library of 135 AI tools
+Provides SEND support with a range of different options
+Disadvantages: 
+Too many AI tools may lead to some being under utilised as there is too many options for teachers to choose from
+Main focus is primary education, may not be useful for different phases of education
+
+Disadvantages of Athena ( DRAFT )
+
+The main obstacle to schools starting to use Athena is likely to be fear that the information generated will be inaccurate. This is because people are often cautious of artificial intelligence, especially when it comes to using it for education, where it is important that the content students are learning is correct. However, Athena will feature an accurate and up-to-date knowledge base, ensuring all lesson plans, practice questions, and other work generated is fully error-free. Additionally, teachers will be able to read through all questions and projects before assigning them to students, to make sure the information is correct and relevant for their students.
+MAIN DRAFT FOR KEY INFORMATION WHICH WEBSITE DEFINITELY MUST HAVE: 
+
+DRAFT Data Analysis
+
+Based on this framework, Athena will need access to and/or store the following information:
+User Profiles
+Courses (Titles, subject, level/grade, assigned instructor)
+Interaction history (AI chats, performance, feedbacks)
+Educational Resources:
+AI generated lessons
+Book references
+Performance
+Quiz scores
+Weekly/Monthly statistics on attendance/progress
+Course completion rates
+ 
+Introduction and Problem Identification
+
+Description of idea - domain of application
+The education sector is made up of many flaws and struggles, from students' struggling to be engaged and feeling unprepared for their futures, to teachers drowning in preparation work for their lessons and struggling to balance work and rest. Our system will aim to aid schools in relieving these struggles, by generating exciting work based on students' unique interests, and freeing up teachers' time.
+Athena is an application which allows teachers and students to curate personalised custom group coursework projects, mock exams or tutorials. For example, if a teacher wants to show their class how to integrate a function and apply it to real world scenarios, usually the whole class would learn from the same examples. Using Athena, the teacher can specify using natural language the topic, how many different examples, as well as any specification they require, and using sophisticated prompt engineering and state of the art AI, Athena can create the lessons. Athena is used by both student and teacher allowing for easy integration into the classroom, including a learning coach to go through and help the students when they are struggling. This frees the teachers time to focus on helping the students where they individually get stuck and allows the students to collaborate on a more diverse set of applications for the given subject.
+Introduction and Problem Identification
+
+Description of idea - domain of application
+The education sector is made up of many flaws and struggles, from students' struggling to be engaged and feeling unprepared for their futures, to teachers drowning in preparation work for their lessons and struggling to balance work and rest. Our system will aim to aid schools in relieving these struggles, by generating exciting work based on students' unique interests, and freeing up teachers' time.
+Athena is an application which allows teachers and students to curate personalised custom group coursework projects, mock exams or tutorials. For example, if a teacher wants to show their class how to integrate a function and apply it to real world scenarios, usually the whole class would learn from the same examples. Using Athena, the teacher can specify using natural language the topic, how many different examples, as well as any specification they require, and using sophisticated prompt engineering and state of the art AI, Athena can create the lessons. Athena is used by both student and teacher allowing for easy integration into the classroom, including a learning coach to go through and help the students when they are struggling. This frees the teachers time to focus on helping the students where they individually get stuck and allows the students to collaborate on a more diverse set of applications for the given subject.
+ 
+Knowledge
+
+Based on the features available in the system, the app will need to store the following knowledge, for each user category.
+1. Teachers
+Information used:
+API - This is needed to generate questions and coursework with accurate knowledge about different subjects, ensuring all teaching and questions are providing students with correct information.
+Information about individual teachers - This is entered into a database by administrators upon enrolling in the system. Information will include name, position, and subjects and year groups taught.
+Classes assigned to - This is entered into a database by administrators at the start of each academic year, to keep track of which students the teacher teaches, allowing work to be assigned to whole classes or smaller groups of students.
+2. Students
+Information used:
+Personal interests - This will be entered by the students, and stored for future reference, in order to generate engaging questions and projects about their individual interests.
+Data about individual students - This is entered into a database by administrators upon enrolling in the system. Information will include name, gender, age, and which subjects and classes they are in. This is used to provide students with work individually catered to them.
+3. Parents/Guardians
+Information used:
+Contact information such as email addresses - This will be entered by the user and used to keep parents up to date with their child's progress.
+Name of and data relating to their child - Parents/guardians can only see information about their own child.
+4. Admin
+Information used:
+Data about individual students - This is entered into a database by administrators upon enrolling in the system. Information will include name, gender, age, and which subjects and classes they are in. This is used to analyse data about students and track the progress of different year groups, subjects, or classes, to ensure they are making the most of the system.
+Information about individual teachers - This is entered into a database by administrators upon enrolling in the system. Information will include name, position, and subjects and year groups taught.
+5. Personal Tutors
+Information used:
+API - This is used to modify learning plans and generate educational resources, featuring accurate knowledge about different subject areas.
+Information on individual tutees - This is used to analyse data on student performance, and cater to individual student needs.
+
+STATISTICS & REFERENCES ( DRAFT )
+
+Engagement Deficit:
+“One in four pupils in England ‘disengage’ when they move up to secondary school.”  [1]
+How would Athena help?
+Athena will personalise the learning experience and this would assist students by personalising examples in ways which they can easily understand based on perhaps the already level of understanding and meeting the learning objectives.
+By doing the point above, it would help with taking a “burden” off the teachers, as it is automatically done, all they would have to do at the early stage would be to briefly check that the example given is suitable.
+Possible Shortcomings:
+Athena may not be as engaging to students who have mitigating circumstances, no matter how much the work is structured towards their interests, if they have things that are distracting in their life, they may still not be engaged."Pupils eligible for free school meals report lower levels of trust, enjoyment, and belonging; the gap widens as secondary school progresses." [1]
+Student & Teacher Burnout & Inefficiencies :
+"The main causes of heavy workload are:
+the volume of administrative tasks
+the volume of marking 
+staff shortages
+lack of support from external specialist agencies such as for special educational needs and disabilities (SEND), or behaviour
+challenging behaviour of pupils
+changes to external examinations
+frequently changing government policies and regulations
+in some cases, lack of skills or training " [2]
+Teachers are not spending enough time on teaching, as they have a lot of marking and they have to spend more time on admin related work instead of teaching. Students therefore, as a consequence of the high workload of teachers, don't always get enough time to grasp the new knowledge they are presented and when tested they don't do as well as they could've done." 
+How would Athena help?
+Athena would help teachers combat the heavy workload they have to deal with as a consequence of becoming a teacher. They would combat it by personalising the students learning as mentioned in the User Categories.
+As a consequence of combating their heavy workload this will increase teacher satisfaction which creates external benefits for society this also means that teachers job retention will be higher as they would enjoy working in a school environment that's not dominated by admin related work - especially for the staff in school that are supposed to teach the students.
+This will mean that issues like staff shortages will also be diminished, as teachers will be happy with their role at school and it also makes staff shortage less of a problem as majority of the marking will not be done by teachers but by Athena. However, proof reading the marking will be required.
+Athena would help reduce the high volume of marking required from teachers. By automating assessment marking and tasking, it allows teachers to dedicate more time to activities such as developing improved teaching materials and providing personalised support to students, especially those who have mitigating circumstances.
+Possible Shortcomings:
+The success of students is not fully determined by teachers. "Poor behaviour in the classroom ( low-level disruption, absenteeism, verbal abuse )" [2]- stems from factors outside school, it includes the students home and socioeconomic status -"Pupils eligible for free school meals report lower levels of trust, enjoyment, and belonging; the gap widens as secondary school progresses." [1] . This demonstrates that student achievement is influenced by a range of factors beyond the teachers control. 
+Considering that this will be a new addition in a school, it will mean that by trying to get rid of 'admin work' for teachers, it actually creates overall more admin work for the other staff, which can be argued is worse off, as the other staff in a school that manage will have a potentially worse wellbeing due to the high work load now they have to deal with.
+There are other causes of stress for both students and teachers; for teachers it's institutions like Ofsted "Educators also feel like Ofsted inspection"[2]
+ 
+References:
+[1] Weale, S. (2025) One in four pupils in England ‘disengage’ when they move to secondary, report finds, The Guardian. Available at: https://www.theguardian.com/education/2025/may/20/one-in-four-pupils-in-england-disengage-when-they-move-to-secondary-report-finds
+Links to an external site.
+ (Accessed: 16 October 2025).
+[2] Ofsted (2019) Summary and recommendations: Teacher well-being research report, GOV.UK. Available at:https://www.gov.uk/government/publications/teacher-well-being-at-work-in-schools-and-further-education-providers/summary-and-recommendations-teacher-well-being-research-report
+Links to an external site.
+ (Accessed: 16 October 2025).
