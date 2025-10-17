@@ -371,16 +371,16 @@
     </section>
 
     <section class="more-info-section">
-      <button id="showMoreBtn" class="button primary large">Show More Info</button>
-    </section>
-
-  </main>
-
-  <!-- Detailed Information Modal -->
-  <div id="infoModal" class="modal">
-    <div class="modal-content">
-      <button class="modal-close" id="closeModal">&times;</button>
-      <div class="modal-body">
+      <button id="showMoreBtn" class="button primary large">
+        <span>Show More Info</span>
+        <svg class="dropdown-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 7.5L10 12.5L15 7.5"/>
+        </svg>
+      </button>
+      
+      <!-- Detailed Information Dropdown -->
+      <div id="infoDropdown" class="info-dropdown">
+        <div class="dropdown-content">
         <h2>Detailed Information</h2>
         
         <section class="modal-section">
@@ -635,9 +635,11 @@
           
           <p>[2] Ofsted (2019) Summary and recommendations: Teacher well-being research report, GOV.UK. Available at: <a href="https://www.gov.uk/government/publications/teacher-well-being-at-work-in-schools-and-further-education-providers/summary-and-recommendations-teacher-well-being-research-report" target="_blank">https://www.gov.uk/government/publications/teacher-well-being-at-work-in-schools-and-further-education-providers/summary-and-recommendations-teacher-well-being-research-report</a> (Accessed: 16 October 2025).</p>
         </section>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
+
+  </main>
 
   <footer class="site-footer">
     <small>© 2025 Athena. Empowering education through AI-driven personalization.</small>

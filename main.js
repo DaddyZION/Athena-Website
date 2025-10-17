@@ -74,35 +74,28 @@ gsap.to(".hero-visual .rings span:nth-child(3)", {
   rotate: 180, scale: 1.1
 });
 
-// Modal functionality
-const modal = document.getElementById('infoModal');
+// Dropdown functionality
+const dropdown = document.getElementById('infoDropdown');
 const showMoreBtn = document.getElementById('showMoreBtn');
-const closeModal = document.getElementById('closeModal');
 
-// Open modal
+// Toggle dropdown
 showMoreBtn.addEventListener('click', () => {
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden'; // Prevent background scrolling
-});
-
-// Close modal
-closeModal.addEventListener('click', () => {
-  modal.classList.remove('active');
-  document.body.style.overflow = 'auto';
-});
-
-// Close modal when clicking outside
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-});
-
-// Close modal with Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal.classList.contains('active')) {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
+  const isActive = dropdown.classList.contains('active');
+  
+  if (isActive) {
+    // Close dropdown
+    dropdown.classList.remove('active');
+    showMoreBtn.classList.remove('active');
+    showMoreBtn.querySelector('span').textContent = 'Show More Info';
+  } else {
+    // Open dropdown
+    dropdown.classList.add('active');
+    showMoreBtn.classList.add('active');
+    showMoreBtn.querySelector('span').textContent = 'Show Less Info';
+    
+    // Smooth scroll to dropdown after a short delay
+    setTimeout(() => {
+      dropdown.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 300);
   }
 });
